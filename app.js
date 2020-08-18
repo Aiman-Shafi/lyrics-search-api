@@ -1,6 +1,6 @@
 
 // Search Button Handler			
-	
+	document.getElementById('hints').style.display = 'none';
 	const searchBtn = document.getElementById('search-button');
 	searchBtn.addEventListener('click', ()=>{
 			const keyword = document.getElementById('keyword').value;
@@ -12,6 +12,7 @@
 			else {
 
 				searchResult(keyword);
+				document.getElementById('hints').style.display = 'block';
 				document.getElementById('keyword').value = '';
 				document.getElementById('lyrics-section').innerHTML = '';
 				document.getElementById('fancy-results').innerHTML = '';
